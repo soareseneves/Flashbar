@@ -46,6 +46,9 @@ internal class FlashbarView(context: Context) : LinearLayout(context) {
     private val TOP_COMPENSATION_MARGIN = resources.getDimension(R.dimen.fb_top_compensation_margin).toInt()
     private val BOTTOM_COMPENSATION_MARGIN = resources.getDimension(R.dimen.fb_bottom_compensation_margin).toInt()
 
+    private val TOP_MARGIN = resources.getDimension(R.dimen.fb_top_margin).toInt()
+    private val BOTTOM_MARGIN = resources.getDimension(R.dimen.fb_bottom_margin).toInt()
+
     private lateinit var parentFlashbarContainer: FlashbarContainerView
     private lateinit var gravity: Gravity
 
@@ -99,10 +102,12 @@ internal class FlashbarView(context: Context) : LinearLayout(context) {
             TOP -> {
                 flashbarViewContentLp.topMargin = statusBarHeight.plus(TOP_COMPENSATION_MARGIN / 2)
                 flashbarViewLp.addRule(ALIGN_PARENT_TOP)
+                flashbarViewLp.bottomMargin = TOP_MARGIN
             }
             BOTTOM -> {
                 flashbarViewContentLp.bottomMargin = BOTTOM_COMPENSATION_MARGIN
                 flashbarViewLp.addRule(ALIGN_PARENT_BOTTOM)
+                flashbarViewLp.bottomMargin = BOTTOM_MARGIN
             }
         }
         fbContent.layoutParams = flashbarViewContentLp

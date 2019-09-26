@@ -13,5 +13,7 @@
     <dimen name="fb_margin_secondary_action">12dp</dimen>
     <dimen name="fb_margin_secondary_action_container">12dp</dimen>
     <dimen name="fb_margin_progress">20dp</dimen>
+    <dimen name="fb_top_margin">0dp</dimen>
+    <dimen name="fb_bottom_margin">0dp</dimen>
 
 </resources>
