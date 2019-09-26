@@ -102,12 +102,12 @@ internal class FlashbarView(context: Context) : LinearLayout(context) {
             TOP -> {
                 flashbarViewContentLp.topMargin = statusBarHeight.plus(TOP_COMPENSATION_MARGIN / 2)
                 flashbarViewLp.addRule(ALIGN_PARENT_TOP)
-                flashbarViewLp.bottomMargin = TOP_MARGIN
+                flashbarViewLp.topMargin = statusBarHeight.plus(TOP_COMPENSATION_MARGIN / 2)
             }
             BOTTOM -> {
                 flashbarViewContentLp.bottomMargin = BOTTOM_COMPENSATION_MARGIN
                 flashbarViewLp.addRule(ALIGN_PARENT_BOTTOM)
-                flashbarViewLp.bottomMargin = BOTTOM_MARGIN
+                flashbarViewLp.bottomMargin = BOTTOM_COMPENSATION_MARGIN
             }
         }
         fbContent.layoutParams = flashbarViewContentLp
