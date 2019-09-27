@@ -101,12 +101,12 @@ internal class FlashbarView(context: Context) : LinearLayout(context) {
         when (gravity) {
             TOP -> {
                 flashbarViewContentLp.topMargin = statusBarHeight.plus(TOP_COMPENSATION_MARGIN / 2)
-                flashbarViewLp.addRule(ALIGN_PARENT_TOP)
+                //flashbarViewLp.addRule(ALIGN_PARENT_TOP)
                 flashbarViewLp.topMargin = 100
             }
             BOTTOM -> {
                 flashbarViewContentLp.bottomMargin = BOTTOM_COMPENSATION_MARGIN
-                flashbarViewLp.addRule(ALIGN_PARENT_BOTTOM)
+                //flashbarViewLp.addRule(ALIGN_PARENT_BOTTOM)
                 flashbarViewLp.bottomMargin = 100
             }
         }
